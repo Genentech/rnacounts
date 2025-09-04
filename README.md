@@ -40,7 +40,7 @@ python3 \
 
 ### `outfile_prefix_rna_tally.tsv`
 
-Variant-level counts of variant-overlapping read pairs. The fields `total_ref_counts`, `total_alt_counts`, and `total_counts` map to the RNA-seq `refDepth*`, `altDepth*`, and `totalDepth*` variables currently created by `neoag` (and stored in `*-perspective_rank-genomic_mutations.tab`) among other places. `tx_alt_counts` and refers to the subset of variant-containing read pairs whose structure is consistent with any transcript present in the input GTF with reference to the variant.  Structural consistency is established by checking read pair aligned contigs against transcript exons, and read splice junctions against transcript splice junctions.
+Variant-level counts of variant-overlapping read pairs. The fields `total_ref_counts`, `total_alt_counts`, and `total_counts` refer to the total read pairs consistent with the reference allele, the alternative allele, and any allele, respectively. `tx_alt_counts` and refers to the subset of variant-containing read pairs whose structure is consistent with any transcript present in the input GTF with reference to the variant.  Structural consistency is established by checking read pair aligned contigs against transcript exons, and read splice junctions against transcript splice junctions.
 
 | seqnames | start     | end       | ref | alt | total_ref_counts | total_alt_counts | tx_ref_counts | non_tx_ref_counts | tx_alt_counts | non_tx_alt_counts | other_counts | total_counts |
 |-------|-----------|-----------|-----|-----|------------------|------------------|---------------|-------------------|---------------|-------------------|--------------|--------------|
