@@ -15,9 +15,10 @@ A python command line tool which counts variant-containing RNA-seq read pairs in
 
 # Requirements 
 
+```
 python3.10 
 pysam==0.23.0
-
+```
 
 # Usage
 
