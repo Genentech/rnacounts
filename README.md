@@ -20,18 +20,19 @@ python3.10
 pysam==0.23.0
 ```
 
-# Usage
+rnacounts has been tested on `CentOS 7` and `Ubuntu 22.04`
 
+# Usage/quick start
 
-## As a standalone python script
+Please test rnacounts using the following command on the input data found in `test_data/`.  The outputs can be compared with those found in `test_data/test_output/`.
 
 ```
 python3 \
-  read_checker.py \
+  rnacounts.py \
   --gtf test_data/rnacounts_test_minimal.gtf \
   --bam test_data/rnacounts_test_input_reads.bam \
   --variants test_data/rnacounts_test_input_variants.tsv \
-  --outdir test_data/test_output/ \
+  --outdir test_data/new_test_output/ \
   --prefix test
 ```
 
