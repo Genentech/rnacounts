@@ -31,9 +31,8 @@ python3 \
   --gtf test_data/rnacounts_test_minimal.gtf \
   --bam test_data/rnacounts_test_input_reads.bam \
   --variants test_data/rnacounts_test_input_variants.tsv \
-  --outdir /path/to/output/directory \
-  --prefix outfile_prefix \
-  --generate_output
+  --outdir test_data/test_output/ \
+  --prefix test
 ```
 
 # Output 
