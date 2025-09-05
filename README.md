@@ -36,6 +36,19 @@ python3 \
   --prefix test
 ```
 
+## Input format
+
+In addition to an RNAseq BAM file and a transcriptome GTF file, `rnacounts` further requires variants in a custom TSV format. This file contains one row per variant per transcript, and should have the following fields:
+
+- `seqnames` : chromosome  
+- `start` : 1-based start position of the variant  
+- `end` : end position of the variant (`start` + length(`ref`) - 1)  
+- `ref` : reference allele  
+- `alt` : alternative allele
+- `Feature` OR `transcript` : transcript ID of transcript overlapping the variant positions
+
+**Important** `rnacounts` expects that all transcripts overlapping the variant will be contained in the input file. Transcripts represented in the input variant file will not be part of the assessment for transcript consistency. Complete transcript variant associations can be compiled by running tools such as Ensembl VEP.
+
 # Output 
 
 ### `outfile_prefix_rna_tally.tsv`
